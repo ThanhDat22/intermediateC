@@ -1,10 +1,14 @@
 // strlen.c
 
+#include "string_length.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 int main(int argc, char ** argv) {
+    
+    // Declaration
     char str1[] = {'T','h','i','s',' ','n','v','t'};
     char str2[] = {'T','h','i','s',' ','s','t','r','0'};
     char str3[] = {'2','n','d',' ','s','t','\0','M'}; // A string because of the null terminator '\0'
@@ -22,6 +26,9 @@ int main(int argc, char ** argv) {
     len3 = strlen(str3);
     len4 = strlen(str4);
     len5 = strlen(str5);
-    printf("len3 = %d,len4 = %d,len5 = %d\n",len3,len4,len5);
+    
+    // Display
+    printf("len3 = %d, len4 = %d, len5 = %d\n",len3,len4,len5);
+    printf("len3 = %d, len4 = %d, len5 = %d\n", string_length(str3), string_length(str4), string_length(str5));
     return EXIT_SUCCESS;
 }
